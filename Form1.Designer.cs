@@ -52,11 +52,11 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.chartGrpah = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.resultTable = new System.Windows.Forms.DataGridView();
-            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Alghoritm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.structure = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Alghoritm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbStrData.SuspendLayout();
             this.gbSize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSize)).BeginInit();
@@ -287,16 +287,26 @@
             this.resultTable.Name = "resultTable";
             this.resultTable.Size = new System.Drawing.Size(884, 179);
             this.resultTable.TabIndex = 6;
-            this.resultTable.Rows.Add("", "", "", "Метод прямого обмена");
-            this.resultTable.Rows.Add("", "", "", "Шейкерная сортировка");
-            this.resultTable.Rows.Add("", "", "", "Метод прямого обмена с запоминанием позиции последней перестановки");
             // 
-            // Time
+            // structure
             // 
-            this.Time.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Time.HeaderText = "Время сортировки";
-            this.Time.Name = "Time";
-            this.Time.ReadOnly = true;
+            this.structure.HeaderText = "Структура данных";
+            this.structure.Name = "structure";
+            this.structure.ReadOnly = true;
+            // 
+            // size
+            // 
+            this.size.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.size.HeaderText = "Размер последовательности";
+            this.size.Name = "size";
+            this.size.ReadOnly = true;
+            this.size.Width = 164;
+            // 
+            // type
+            // 
+            this.type.HeaderText = "Тип упорядоченности";
+            this.type.Name = "type";
+            this.type.ReadOnly = true;
             // 
             // Alghoritm
             // 
@@ -306,22 +316,12 @@
             this.Alghoritm.ReadOnly = true;
             this.Alghoritm.Width = 131;
             // 
-            // type
+            // Time
             // 
-            this.type.HeaderText = "Тип упорядоченности";
-            this.type.Name = "type";
-            // 
-            // size
-            // 
-            this.size.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.size.HeaderText = "Размер последовательности";
-            this.size.Name = "size";
-            this.size.Width = 164;
-            // 
-            // structure
-            // 
-            this.structure.HeaderText = "Структура данных";
-            this.structure.Name = "structure";
+            this.Time.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Time.HeaderText = "Время сортировки";
+            this.Time.Name = "Time";
+            this.Time.ReadOnly = true;
             // 
             // MainForm
             // 
