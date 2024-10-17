@@ -1,0 +1,11 @@
+F:\СиАОД курсовая работа\app\bin\Debug\app.exe.config
+F:\СиАОД курсовая работа\app\bin\Debug\app.exe
+F:\СиАОД курсовая работа\app\bin\Debug\app.pdb
+F:\СиАОД курсовая работа\app\obj\Debug\app.csproj.AssemblyReference.cache
+F:\СиАОД курсовая работа\app\obj\Debug\app.csproj.SuggestedBindingRedirects.cache
+F:\СиАОД курсовая работа\app\obj\Debug\app.MainForm.resources
+F:\СиАОД курсовая работа\app\obj\Debug\app.Properties.Resources.resources
+F:\СиАОД курсовая работа\app\obj\Debug\app.csproj.GenerateResource.cache
+F:\СиАОД курсовая работа\app\obj\Debug\app.csproj.CoreCompileInputs.cache
+F:\СиАОД курсовая работа\app\obj\Debug\app.exe
+F:\СиАОД курсовая работа\app\obj\Debug\app.pdb
