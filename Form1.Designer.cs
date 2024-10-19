@@ -52,11 +52,17 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.chartGrpah = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.resultTable = new System.Windows.Forms.DataGridView();
-            this.structure = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Alghoritm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.twenty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thirty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fourty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fifty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sixty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.seventy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eighty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ninety = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hundred = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbStrData.SuspendLayout();
             this.gbSize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSize)).BeginInit();
@@ -226,6 +232,7 @@
             this.btnSort.TabIndex = 3;
             this.btnSort.Text = "Сортировать";
             this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // btnClose
             // 
@@ -278,35 +285,21 @@
             this.resultTable.AllowUserToDeleteRows = false;
             this.resultTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.resultTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.structure,
-            this.size,
-            this.type,
             this.Alghoritm,
-            this.Time});
+            this.ten,
+            this.twenty,
+            this.thirty,
+            this.fourty,
+            this.fifty,
+            this.sixty,
+            this.seventy,
+            this.eighty,
+            this.ninety,
+            this.hundred});
             this.resultTable.Location = new System.Drawing.Point(236, 362);
             this.resultTable.Name = "resultTable";
             this.resultTable.Size = new System.Drawing.Size(884, 179);
             this.resultTable.TabIndex = 6;
-            // 
-            // structure
-            // 
-            this.structure.HeaderText = "Структура данных";
-            this.structure.Name = "structure";
-            this.structure.ReadOnly = true;
-            // 
-            // size
-            // 
-            this.size.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.size.HeaderText = "Размер последовательности";
-            this.size.Name = "size";
-            this.size.ReadOnly = true;
-            this.size.Width = 164;
-            // 
-            // type
-            // 
-            this.type.HeaderText = "Тип упорядоченности";
-            this.type.Name = "type";
-            this.type.ReadOnly = true;
             // 
             // Alghoritm
             // 
@@ -314,14 +307,67 @@
             this.Alghoritm.HeaderText = "Алгоритм сортировки";
             this.Alghoritm.Name = "Alghoritm";
             this.Alghoritm.ReadOnly = true;
-            this.Alghoritm.Width = 131;
+            this.Alghoritm.Width = 391;
             // 
-            // Time
+            // ten
             // 
-            this.Time.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Time.HeaderText = "Время сортировки";
-            this.Time.Name = "Time";
-            this.Time.ReadOnly = true;
+            this.ten.HeaderText = "10%";
+            this.ten.Name = "ten";
+            this.ten.ReadOnly = true;
+            // 
+            // twenty
+            // 
+            this.twenty.HeaderText = "20%";
+            this.twenty.Name = "twenty";
+            this.twenty.ReadOnly = true;
+            // 
+            // thirty
+            // 
+            this.thirty.HeaderText = "30%";
+            this.thirty.Name = "thirty";
+            this.thirty.ReadOnly = true;
+            // 
+            // fourty
+            // 
+            this.fourty.HeaderText = "40%";
+            this.fourty.Name = "fourty";
+            this.fourty.ReadOnly = true;
+            // 
+            // fifty
+            // 
+            this.fifty.HeaderText = "50%";
+            this.fifty.Name = "fifty";
+            this.fifty.ReadOnly = true;
+            // 
+            // sixty
+            // 
+            this.sixty.HeaderText = "60%";
+            this.sixty.Name = "sixty";
+            this.sixty.ReadOnly = true;
+            // 
+            // seventy
+            // 
+            this.seventy.HeaderText = "70%";
+            this.seventy.Name = "seventy";
+            this.seventy.ReadOnly = true;
+            // 
+            // eighty
+            // 
+            this.eighty.HeaderText = "80%";
+            this.eighty.Name = "eighty";
+            this.eighty.ReadOnly = true;
+            // 
+            // ninety
+            // 
+            this.ninety.HeaderText = "90%";
+            this.ninety.Name = "ninety";
+            this.ninety.ReadOnly = true;
+            // 
+            // hundred
+            // 
+            this.hundred.HeaderText = "100%";
+            this.hundred.Name = "hundred";
+            this.hundred.ReadOnly = true;
             // 
             // MainForm
             // 
@@ -371,11 +417,17 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartGrpah;
         private System.Windows.Forms.DataGridView resultTable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn structure;
-        private System.Windows.Forms.DataGridViewTextBoxColumn size;
-        private System.Windows.Forms.DataGridViewTextBoxColumn type;
         private System.Windows.Forms.DataGridViewTextBoxColumn Alghoritm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ten;
+        private System.Windows.Forms.DataGridViewTextBoxColumn twenty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thirty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fourty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fifty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sixty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn seventy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eighty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ninety;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hundred;
     }
 }
 

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace app
 {
     internal class SinglyLinkedListConstructor
     {
 
-        public class Node
+        private class Node
         {
             public int _value;
             public Node _next;
@@ -28,49 +25,54 @@ namespace app
 
         private Node _first;
 
+        private Node _last;
+
         private int _length;
 
         public SinglyLinkedListConstructor() { 
             _first = null;
+            _last = null;
             _length = 0;
         }
 
-        public void Add(Node node)
+        public void Add(int value)
         {
+            Node node = new Node(value);
             if (_first == null)
             {
                 _first = node;
+                _last = node;
             }
             else
             {
-                Node tmp = _first;
-                while(tmp._next != null)
-                {
-                    tmp = tmp._next;
-                }
-                tmp._next = node;
+                _last._next = node;
+                _last = node;
             }
+                
             _length++;
         }
 
-        public int Get(int index)
+        public void RemoveLast()
         {
-            if(index < 0 || index>=_length)
+            if(_first == null)
             {
-                return -1;
+                return;
             }
-            int currentindex = 0;
+            if(_first._next == null)
+            {
+                _first = null;
+                _last = null;
+                _length--;
+                return;
+            }
             Node tmp = _first;
-            while(tmp!=null)
+            while (tmp._next != _last)
             {
-                if(index == currentindex)
-                {
-                    return tmp._value;
-                }
                 tmp = tmp._next;
-                currentindex++;
             }
-            return -1;
+            tmp._next = null;
+            _last = tmp;
+            _length--;
         }
 
         public static SinglyLinkedListConstructor createNotOrdered(int size)
@@ -79,7 +81,7 @@ namespace app
             Random rnd = new Random();
             for(int i = 0; i < size; i++)
             {
-                tmp.Add(new Node(rnd.Next(1, size)));
+                tmp.Add(rnd.Next(1,size));
             }
             return tmp;
         }
@@ -89,11 +91,11 @@ namespace app
             SinglyLinkedListConstructor tmp = new SinglyLinkedListConstructor();
             Random rnd = new Random();
             int prev = rnd.Next(1, 5);
-            tmp.Add(new Node(prev));
+            tmp.Add(prev);
             for(int i = 1; i < size; i++)
             {
                 prev += rnd.Next(1, 5);
-                tmp.Add(new Node(prev));
+                tmp.Add(prev);
             }
             return tmp;
         }
@@ -102,9 +104,11 @@ namespace app
         {
             SinglyLinkedListConstructor tmp = SinglyLinkedListConstructor.createOrdered(size);
             SinglyLinkedListConstructor reverse = new SinglyLinkedListConstructor();
-            for(int i = size-1; i >= 0; i--)
+            for(int i = 0; i < size; i++)
             {
-                reverse.Add(new Node(tmp.Get(i)));
+                int node = tmp._last._value;
+                reverse.Add(node);
+                tmp.RemoveLast();
             }
             return reverse;
         }
@@ -114,18 +118,20 @@ namespace app
             SinglyLinkedListConstructor tmp = new SinglyLinkedListConstructor();
             Random rnd = new Random();
             int prev = rnd.Next(1, 5);
-            tmp.Add(new Node(prev));
+            tmp.Add(prev);
             for (int i = 1; i < size*percent/100; i++)
             {
                 prev += rnd.Next(1, 5);
-                tmp.Add(new Node(prev));
+                tmp.Add(prev);
             }
             for(int i = size*percent/100; i < size; i++)
             {
-                tmp.Add(new Node(rnd.Next(1, size)));
+                tmp.Add(rnd.Next(1, size));
             }
             return tmp;
         }
+
+
 
         public int Length()
         {
