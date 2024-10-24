@@ -3,7 +3,7 @@
 
 namespace app
 {
-    internal class SinglyLinkedListConstructor
+    internal class SinglyLinkedList 
     {
 
         private class Node
@@ -29,7 +29,7 @@ namespace app
 
         private int _length;
 
-        public SinglyLinkedListConstructor() { 
+        public SinglyLinkedList() { 
             _first = null;
             _last = null;
             _length = 0;
@@ -75,9 +75,9 @@ namespace app
             _length--;
         }
 
-        public static SinglyLinkedListConstructor createNotOrdered(int size)
+        public static SinglyLinkedList createNotOrdered(int size)
         {
-            SinglyLinkedListConstructor tmp = new SinglyLinkedListConstructor();
+            SinglyLinkedList tmp = new SinglyLinkedList();
             Random rnd = new Random();
             for(int i = 0; i < size; i++)
             {
@@ -86,9 +86,9 @@ namespace app
             return tmp;
         }
 
-        public static SinglyLinkedListConstructor createOrdered(int size)
+        public static SinglyLinkedList createOrdered(int size)
         {
-            SinglyLinkedListConstructor tmp = new SinglyLinkedListConstructor();
+            SinglyLinkedList tmp = new SinglyLinkedList();
             Random rnd = new Random();
             int prev = rnd.Next(1, 5);
             tmp.Add(prev);
@@ -100,10 +100,10 @@ namespace app
             return tmp;
         }
 
-        public static SinglyLinkedListConstructor createReverseOrdered(int size)
+        public static SinglyLinkedList createReverseOrdered(int size)
         {
-            SinglyLinkedListConstructor tmp = SinglyLinkedListConstructor.createOrdered(size);
-            SinglyLinkedListConstructor reverse = new SinglyLinkedListConstructor();
+            SinglyLinkedList tmp = SinglyLinkedList.createOrdered(size);
+            SinglyLinkedList reverse = new SinglyLinkedList();
             for(int i = 0; i < size; i++)
             {
                 int node = tmp._last._value;
@@ -113,9 +113,9 @@ namespace app
             return reverse;
         }
 
-        public static SinglyLinkedListConstructor createPartlyOrdered(int size, int percent)
+        public static SinglyLinkedList createPartlyOrdered(int size, int percent)
         {
-            SinglyLinkedListConstructor tmp = new SinglyLinkedListConstructor();
+            SinglyLinkedList tmp = new SinglyLinkedList();
             Random rnd = new Random();
             int prev = rnd.Next(1, 5);
             tmp.Add(prev);

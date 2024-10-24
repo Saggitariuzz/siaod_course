@@ -300,6 +300,9 @@
             this.resultTable.Name = "resultTable";
             this.resultTable.Size = new System.Drawing.Size(884, 179);
             this.resultTable.TabIndex = 6;
+            this.resultTable.Rows.Add("Метод прямого обмена");
+            this.resultTable.Rows.Add("Шейкерная сортировка");
+            this.resultTable.Rows.Add("Метод прямого обмена с запоминанием позиции последней перестановки");
             // 
             // Alghoritm
             // 
