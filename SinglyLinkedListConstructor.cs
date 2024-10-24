@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace app
 {
@@ -131,7 +131,104 @@ namespace app
             return tmp;
         }
 
+        public static int bubbleSort(SinglyLinkedList list)
+        {
+            int N = list.Length();
+            int StartTime = Environment.TickCount;
+            for (int i = 1; i < N; i++)
+            {
+                Node current = list._first;
+                bool isSorted = true;
+                for (int j = 0; j < N - i; j++)
+                {
+                    if (current._value > current._next._value)
+                    {
+                        int temp = current._value;
+                        current._value = current._next._value;
+                        current._next._value = temp;
+                        isSorted = false;
+                    }
+                    current = current._next;
+                }
+                if (isSorted)
+                {
+                    break;
+                }
+            }
+            int ResultTime = Environment.TickCount - StartTime;
+            return ResultTime;
+        }
 
+        public static int shakerSort(SinglyLinkedList list)
+        {
+            int Left = 0;
+            int Right = list.Length() - 1;
+            int StartTime = Environment.TickCount;
+            while (Left < Right)
+            {
+                bool isSwapped = false;
+                Node current = list._first;
+                for (int i = Left; i < Right; i++)
+                {
+                    if (current._value > current._next._value)
+                    {
+                        int temp = current._value;
+                        current._value = current._next._value;
+                        current._next._value = temp;
+                        isSwapped = true;
+                    }
+                    current = current._next;
+                }
+                Right--;
+                Node prev = list._first;
+                current = prev._next;
+                for (int i = Right; i > Left; i--)
+                {
+                    if (prev._value > current._value)
+                    {
+                        int temp = prev._value;
+                        prev._value = current._value;
+                        current._value = temp;
+                        isSwapped = true;
+                    }
+                    current = current._next;
+                    prev = prev._next;
+                }
+                Left++;
+                if (!isSwapped)
+                {
+                    break;
+                }
+            }
+            int ResultTime = Environment.TickCount - StartTime;
+            return ResultTime;
+        }
+
+        public static int savePositionBubbleSort(SinglyLinkedList list)
+        {
+            int N = list.Length();
+            int lastSwap = N - 1;
+            int StartTime = Environment.TickCount;
+            while (lastSwap > 0)
+            {
+                int swapIndex = 0;
+                Node current = list._first;
+                for(int i = 0;i < lastSwap; i++)
+                {
+                    if(current._value > current._next._value)
+                    {
+                        int temp = current._value;
+                        current._value = current._next._value;
+                        current._next._value = temp;
+                        swapIndex = i;
+                    }
+                    current = current._next;
+                }
+                lastSwap = swapIndex;
+            }
+            int ResultTime = Environment.TickCount - StartTime;
+            return ResultTime;
+        }
 
         public int Length()
         {
