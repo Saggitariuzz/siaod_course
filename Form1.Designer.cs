@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.gbStrData = new System.Windows.Forms.GroupBox();
             this.rbLinkedList = new System.Windows.Forms.RadioButton();
             this.rbList = new System.Windows.Forms.RadioButton();
@@ -142,6 +142,11 @@
             0,
             0,
             0});
+            this.nudSize.Minimum = new decimal(new int[] {
+            -2147483648,
+            0,
+            0,
+            -2147483648});
             this.nudSize.Name = "nudSize";
             this.nudSize.Size = new System.Drawing.Size(166, 20);
             this.nudSize.TabIndex = 0;
@@ -165,6 +170,16 @@
             // 
             this.nudPercent.Enabled = false;
             this.nudPercent.Location = new System.Drawing.Point(16, 143);
+            this.nudPercent.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
+            this.nudPercent.Minimum = new decimal(new int[] {
+            -2147483648,
+            0,
+            0,
+            -2147483648});
             this.nudPercent.Name = "nudPercent";
             this.nudPercent.Size = new System.Drawing.Size(166, 20);
             this.nudPercent.TabIndex = 5;
@@ -247,37 +262,40 @@
             // 
             // chartGrpah
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartGrpah.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            legend1.Title = "Алгоритмы сортировки";
-            this.chartGrpah.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chartGrpah.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            legend2.Title = "Алгоритмы сортировки";
+            this.chartGrpah.Legends.Add(legend2);
             this.chartGrpah.Location = new System.Drawing.Point(219, 10);
             this.chartGrpah.Name = "chartGrpah";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Метод прямого обмена";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            series2.Legend = "Legend1";
-            series2.Name = "Шейкерная сортировка";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Color = System.Drawing.Color.Red;
-            series3.Legend = "Legend1";
-            series3.Name = "Метод прямого обмена\\nс запоминанем позиции\\nпоследней перестановки";
-            series3.YValuesPerPoint = 2;
-            this.chartGrpah.Series.Add(series1);
-            this.chartGrpah.Series.Add(series2);
-            this.chartGrpah.Series.Add(series3);
+            series4.BorderWidth = 3;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.Name = "Метод прямого обмена";
+            series5.BorderWidth = 3;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            series5.Legend = "Legend1";
+            series5.Name = "Шейкерная сортировка";
+            series6.BorderWidth = 3;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Color = System.Drawing.Color.Red;
+            series6.Legend = "Legend1";
+            series6.Name = "Метод прямого обмена\\nс запоминанем позиции\\nпоследней перестановки";
+            series6.YValuesPerPoint = 2;
+            this.chartGrpah.Series.Add(series4);
+            this.chartGrpah.Series.Add(series5);
+            this.chartGrpah.Series.Add(series6);
             this.chartGrpah.Size = new System.Drawing.Size(901, 329);
             this.chartGrpah.TabIndex = 5;
             this.chartGrpah.Text = "chart1";
-            title1.Name = "Title1";
-            title1.Text = "Графическое сравнение алгоритмов сортировки";
-            this.chartGrpah.Titles.Add(title1);
+            title2.Name = "Title1";
+            title2.Text = "Графическое сравнение алгоритмов сортировки";
+            this.chartGrpah.Titles.Add(title2);
             // 
             // resultTable
             // 

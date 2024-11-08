@@ -37,7 +37,33 @@ namespace app
 
         private void btnSort_Click(object sender, EventArgs e)
         {
+            if(!rbArray.Checked && !rbList.Checked && !rbLinkedList.Checked)
+            {
+                MessageBox.Show("Выберите структуру данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if(!rbDisord.Checked && !rbOrd.Checked && !rbPartOrd.Checked && !rbBackOrd.Checked)
+            {
+                MessageBox.Show("Выберите тип упорядоченности", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             int size = (int)nudSize.Value;
+            if(size <= 0 )
+            {
+                MessageBox.Show("Размер структуры данных не может быть меньше или равен 0",
+                    "Ошибка",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
+            if(rbPartOrd.Checked && ((int)nudPercent.Value<=0 || (int)nudPercent.Value > 100))
+            {
+                MessageBox.Show("Процент упорядоченности должен быть меньше 100 и больше или равен 0",
+                    "Ошибка",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
             chartGrpah.Series[0].Points.Clear();
             chartGrpah.Series[0].Points.AddXY(0, 0);
             chartGrpah.Series[1].Points.Clear();
