@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2B3ADDDD-FEBE-4295-A4BD-2F5F65F0E4B6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>app</RootNamespace>
-    <AssemblyName>app</AssemblyName>
+    <RootNamespace>Kostinevich23VP2</RootNamespace>
+    <AssemblyName>Kostinevich23VP2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

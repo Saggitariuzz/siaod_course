@@ -102,7 +102,11 @@ namespace app
                     }
                 }
                 Right--;
-                for(int i = Right; i > Left; i--)
+                if (!isSwapped)
+                {
+                    break;
+                }
+                for (int i = Right; i > Left; i--)
                 {
                     if (_array[i - 1] > _array[i])
                     {

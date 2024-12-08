@@ -180,10 +180,19 @@ namespace app
                     current = current._next;
                 }
                 Right--;
-                Node prev = list._first;
-                current = prev._next;
+                if (!isSwapped)
+                {
+                    break;
+                }
                 for (int i = Right; i > Left; i--)
                 {
+                    Node prev = null;
+                    current = list._first;
+                    for (int j = 0; j < i; j++)
+                    {
+                        prev = current;
+                        current = current._next;
+                    }
                     if (prev._value > current._value)
                     {
                         int temp = prev._value;
@@ -191,8 +200,6 @@ namespace app
                         current._value = temp;
                         isSwapped = true;
                     }
-                    current = current._next;
-                    prev = prev._next;
                 }
                 Left++;
                 if (!isSwapped)

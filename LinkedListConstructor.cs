@@ -112,7 +112,11 @@ namespace app
                     current = current.Next;
                 }
                 Right--;
-                for(int i = Right;i>Left;i--) {
+                if (!isSwapped)
+                {
+                    break;
+                }
+                for (int i = Right;i>Left;i--) {
                     if(current.Previous.Value > current.Value)
                     {
                         int temp = current.Value;
